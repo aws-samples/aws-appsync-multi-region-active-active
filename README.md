@@ -161,6 +161,7 @@ npm run start
 ## Clean up
 Run the command below to clean up the stacks created.
 ```bash
+cd appsync-multi-region-active-active/appsync-mutli-region-api
 chmod +x global_appsync_cleanup.sh
 ./global_appsync_cleanup.sh
 ```
