@@ -1,0 +1,66 @@
+input AddTodo {
+	id: ID!
+	name: String
+	description: String
+	priority: Int
+	status: TodoStatus
+}
+
+input DeleteTodo {
+	id: ID!
+}
+
+type Mutation {
+	addTodo(input: AddTodo): Todo
+	deleteTodo(input: DeleteTodo): Todo
+	updateTodo(input: UpdateTodo): Todo
+	addTodoGlobalSync(input: AddTodo): Todo
+	deleteTodoGlobalSync(input: DeleteTodo): Todo
+	updateTodoGlobalSync(input: UpdateTodo): Todo
+}
+
+type Query {
+	listTodos(limit: Int, nextToken: String): TodoConnection
+	getTodo(id: ID!): Todo
+}
+
+type Subscription {
+	onAddTodo(input: AddTodo): Todo
+		@aws_subscribe(mutations: ["addTodoGlobalSync"])
+	onDeleteTodo(input: DeleteTodo): Todo
+		@aws_subscribe(mutations: ["deleteTodoGlobalSync"])
+	onUpdateTodo(input: UpdateTodo): Todo
+		@aws_subscribe(mutations: ["updateTodoGlobalSync"])
+}
+
+type Todo {
+	id: ID!
+	name: String
+	description: String
+	priority: Int
+	status: TodoStatus
+}
+
+type TodoConnection {
+	todos: [Todo]
+	nextToken: String
+}
+
+enum TodoStatus {
+	done
+	pending
+}
+
+input UpdateTodo {
+	id: ID!
+	name: String
+	description: String
+	priority: Int
+	status: TodoStatus
+}
+
+schema {
+	query: Query
+	mutation: Mutation
+	subscription: Subscription
+}

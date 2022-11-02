@@ -1,0 +1,61 @@
+:root,
+[data-amplify-theme] {
+  --amplify-green: hsl(130, 43%, 46%);
+}
+
+#app {
+  margin: 2% 2%;
+}
+
+
+.main-card {
+  max-height: 40%;
+  width: 49%;
+  margin: 0.5% 0.5%;
+  float: left;
+}
+
+.sub-card {
+  float: right;
+  max-height: 40%;
+  width: 49%;
+  margin: 0.5% 0.5%;
+}
+
+#header {
+  background: var(--amplify-green);
+  height: 60px;
+  text-align: center;
+}
+
+form {
+  margin: 1% 27%;
+  text-align: left;
+}
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  background: var(--amplify-green);
+  border: none;
+  font-weight: 700;
+  font-size: larger;
+  padding: 10px;
+  color: white;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+
+.button-sub {
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 700;
+  font-size: larger;
+  border-color: var(--amplify-green);
+  float: right;
+  background: white;
+  margin: 20px 0;
+  border-radius: 5px;
+  margin: 20px 10px;
+}
