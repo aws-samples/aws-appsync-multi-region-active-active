@@ -69,15 +69,15 @@ npm install
     ```
     * Save the changes to the file
 
-3. Boostrap CDK in the target regions by running the commands below. You will need to specify the primary and secondary region code
+3. Boostrap CDK in the target regions by running the commands below. You will need to specify the primary and secondary region code (e.g. eu-west-1 and us-east-1)
 ```bash
 cdk bootstrap <AWS_Account_ID>/<primary_region_code> <AWS_Account_ID>/<secondary_region_code> <AWS_Account_ID>/us-east-1
 ```
 
-4. Deploy the CDK stacks
+4. Deploy the CDK stacks providing the value for the primary region code (e.g. eu-west-1)
 ```bash
 chmod +x global_appsync_setup.sh
-./global_appsync_setup.sh
+./global_appsync_setup.sh <primary_region_code>
 ```
    
 ## Testing your APIs
