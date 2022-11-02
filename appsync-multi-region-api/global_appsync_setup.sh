@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT-0
 
 # Install Lambda Dependencies
-cd lambdas/ddb-stream-processor
+cd appsync-mutli-region-api/lambdas/ddb-stream-processor/
 npm install
 
 # Build CDK app

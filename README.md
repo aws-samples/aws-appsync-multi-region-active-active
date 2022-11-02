@@ -46,14 +46,15 @@ npm install -g @aws-amplify/cli
 ```
 
 ## Setting up the infrastructure
-1. Clone the CDK App
+1. Clone the CDK App and install dependencies
 ```bash
-git clone https://github.com/Tessot/appsync-multi-region-active-active.git
-cd appsync-multi-region-active-active/appsync-mutli-region-api
+git clone https://github.com/aws-samples/aws-appsync-multi-region-active-active.git
+cd aws-appsync-multi-region-active-active/appsync-mutli-region-api
+npm install
 ```
 
 2. Update the global parameters. Note, you only need to create the Hosted Zone in Amazon Route 53, you do not need to create the DNS entries for the other domain name requested below. The CDK App will create the DNS entries in Route 53
-   * Navigate to the file `appsync-multi-region-active-active/appsync-mutli-region-api/parameters/globalVariables.ts`
+   * Navigate to the file `aws-appsync-multi-region-active-active/appsync-mutli-region-api/parameters/globalVariables.ts`
    * Update the parameter values with the values specific to your API and AWS Account
    ```bash
     route53HostedZoneName: '<example.com>',
@@ -119,7 +120,7 @@ We will be using [Postman](https://www.postman.com/) to test the API so if not a
 
 1. Navigate to the Todo App directory
 ```bash
-cd appsync-multi-region-active-active/sample-todo-app
+cd aws-appsync-multi-region-active-active/sample-todo-app
 ```
 
 2. Install dependencies
@@ -161,7 +162,7 @@ npm run start
 ## Clean up
 Run the command below to clean up the stacks created.
 ```bash
-cd appsync-multi-region-active-active/appsync-mutli-region-api
+cd aws-appsync-multi-region-active-active/appsync-mutli-region-api
 chmod +x global_appsync_cleanup.sh
 ./global_appsync_cleanup.sh
 ```
