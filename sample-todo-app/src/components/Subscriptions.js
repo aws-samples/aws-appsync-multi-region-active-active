@@ -4,8 +4,6 @@ import { useState } from 'react';
 import { Heading, Alert } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
-
-// Create subscriptions component
 export const Subscriptions = () => {
 
   const [newTodoSubscriptionMessage, setNewTodoSubscriptionMessage] = useState([])

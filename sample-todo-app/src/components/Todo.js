@@ -11,7 +11,6 @@ import { useEffect } from 'react';
 import { API } from 'aws-amplify'
 import { listTodos } from '../graphql/queries'
 
-//create a table with the existing Todos
 export const Todo = (props,) => {
   const { todoData } = props;
   useEffect(() => {
