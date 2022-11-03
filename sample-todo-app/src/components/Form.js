@@ -10,7 +10,7 @@ import { addTodo } from '../graphql/mutations'
 import { API } from 'aws-amplify'
 import '@aws-amplify/ui-react/styles.css';
 
-//Create a form
+//Container for the form
 export const Form = (props) => {
 
   const handleSubmit = async (e) => {
