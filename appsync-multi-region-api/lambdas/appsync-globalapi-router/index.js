@@ -4,7 +4,7 @@ const routingConfigs = require('./configs.json')
 let bestOrigin;
 let expires = 0;
 let TTL = 1;
-let DNS_HOST = routingConfigs.regionLatencyRoutingDNS;
+let DNS_HOST = routingConfigs.route53RoutingPolicyDomainName;
 
 function getBestRegion() {
     console.log("inside resolver");
@@ -22,8 +22,8 @@ function getBestRegion() {
 
 let regions = []; // use lowercase.
     
-regions[routingConfigs.primaryAppSyncAPIRegionName] = { "Host": routingConfigs.primaryAppSyncAPICustomDomain};
-regions[routingConfigs.secondaryAppSyncAPIRegionName] = { "Host": routingConfigs.secondaryAppSyncAPICustomDomain};
+regions[routingConfigs.primaryRegion] = { "Host": routingConfigs.primaryRegionAppSyncCustomDomain};
+regions[routingConfigs.secondaryRegion] = { "Host": routingConfigs.secondaryRegionAppSyncCustomDomain};
     
 function getRegionalSettings(bestRegion){
     return regions[bestRegion];

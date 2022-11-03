@@ -76,12 +76,26 @@ npm install
     ```
     * Save the changes to the file
 
-3. Boostrap CDK in the target regions by running the commands below. You will need to specify the primary and secondary region code (e.g. eu-west-1 and us-east-1)
+3. Update the variables required by Lambda@Edge. This is required because you cannot use environment variables for Lambda@Edge. For other options on passing variables to lambda at edge, refer to the blog [here](https://aws.amazon.com/blogs/networking-and-content-delivery/leveraging-external-data-in-lambdaedge/)
+  * Navigate to the file 
+   ```bash
+   aws-appsync-multi-region-active-active/appsync-multi-region-api/lambdas/appsync-globalapi-router/configs.json
+   ```
+   * Update the parameter values with the values specific to your API and AWS Account, using the same values provided in the above configuration
+   ```bash
+    route53RoutingPolicyDomainName: '<routingpolicy.example.com>',
+    primaryRegion: '<region_code>',
+    primaryRegionAppSyncCustomDomain: '<primary.example.com>',
+    secondaryRegion: '<region_code>',
+    secondaryRegionAppSyncCustomDomain: '<secondary.example.com>',
+   ```
+
+4. Boostrap CDK in the target regions by running the commands below. You will need to specify the primary and secondary region code (e.g. eu-west-1 and us-east-1)
 ```bash
 cdk bootstrap <AWS_Account_ID>/<primary_region_code> <AWS_Account_ID>/<secondary_region_code> <AWS_Account_ID>/us-east-1
 ```
 
-4. Deploy the CDK stacks providing the value for the primary region code (e.g. eu-west-1)
+5. Deploy the CDK stacks providing the value for the primary region code (e.g. eu-west-1)
 ```bash
 chmod +x global_appsync_setup.sh
 ./global_appsync_setup.sh <primary_region_code>

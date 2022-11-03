@@ -1,7 +1,7 @@
 {
-    "regionLatencyRoutingDNS": "lat-routing.codeforevery.com",
-    "primaryAppSyncAPIRegionName": "eu-west-1",
-    "primaryAppSyncAPICustomDomain": "primary.codeforevery.com",
-    "secondaryAppSyncAPIRegionName": "ap-southeast-1",
-    "secondaryAppSyncAPICustomDomain": "secondary.codeforevery.com"
+    "route53RoutingPolicyDomainName": "lat-routing.codeforevery.com",
+    "primaryRegion": "eu-west-1",
+    "primaryRegionAppSyncCustomDomain": "primary.codeforevery.com",
+    "secondaryRegion": "ap-southeast-1",
+    "secondaryRegionAppSyncCustomDomain": "secondary.codeforevery.com"
 }
