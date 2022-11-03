@@ -7,11 +7,14 @@ import { deleteTodo } from '../graphql/mutations';
 import { API } from 'aws-amplify';
 import { Subscriptions } from './Subscriptions'
 
+
+//container for the formular and the table
 export const List = () => {
   const [todoData, setTodoData] = useState([])
-
   const handleTodoDelete = async (todoId) => {
+
     const newTodoData = todoData.filter((todo) => todo.id !== todoId)
+
     try {
       await API.graphql({
         query: deleteTodo,

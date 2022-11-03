@@ -10,9 +10,8 @@ import { addTodo } from '../graphql/mutations'
 import { API } from 'aws-amplify'
 import '@aws-amplify/ui-react/styles.css';
 
-export const Form = (props, { setTodoData }) => {
-  const { todoData } = props;
-
+//Create a form
+export const Form = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -91,7 +90,6 @@ export const Form = (props, { setTodoData }) => {
         <button className="button" >
           Add todos
         </button>
-
       </form >
     </>
   );

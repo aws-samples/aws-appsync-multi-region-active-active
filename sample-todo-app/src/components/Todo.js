@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import { API } from 'aws-amplify'
 import { listTodos } from '../graphql/queries'
 
+//create a table with the existing Todos
 export const Todo = (props,) => {
   const { todoData } = props;
   useEffect(() => {
@@ -33,14 +34,12 @@ export const Todo = (props,) => {
 
   return (
     <Table
-
       textAlign="left"
       size="small"
       caption=""
       highlightOnHover={false}>
       <TableHead>
         <TableRow size="small">
-          {/* <TableCell as="th">Id</TableCell> */}
           <TableCell width="14%" as="th">Name</TableCell>
           <TableCell width="15%" as="th">Description</TableCell>
           <TableCell width="14%" as="th">Priority</TableCell>
@@ -56,9 +55,6 @@ export const Todo = (props,) => {
             key={row.id}
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
           >
-            {/* <TableCell component="th" scope="row">
-              {row.id}
-            </TableCell> */}
             <TableCell align="right">{row.name}</TableCell>
             <TableCell align="right">{row.description}</TableCell>
             <TableCell align="right">{row.priority}</TableCell>

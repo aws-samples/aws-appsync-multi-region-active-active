@@ -5,8 +5,8 @@ import { Heading, Alert } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 
-
-export const Subscriptions = ({ todoData, handleTodoDelete }) => {
+// Create subscriptions component
+export const Subscriptions = () => {
 
   const [newTodoSubscriptionMessage, setNewTodoSubscriptionMessage] = useState([])
   const [subscriptionVar, setSubscriptionVar] = useState()
