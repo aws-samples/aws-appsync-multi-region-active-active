@@ -47,7 +47,7 @@ npm install -g @aws-amplify/cli
 
 ## Setting up the infrastructure
 
-| :exclamation:  These steps have been tested using [AWS Cloud9](https://aws.amazon.com/cloud9/) terminal and it is highly recommended to use to create a Cloud9 instance in your AWS Account and follow the instructions below. You can select either t3.small (2 GiB RAM + 2 vCPU) or m5.large (8 GiB RAM + 2 vCPU) when creating the Cloud9 instance   |
+| :exclamation:  These steps have been tested using [AWS Cloud9](https://aws.amazon.com/cloud9/) terminal and it is highly recommended to setup the infrastructure using a Cloud9. You can select either t3.small (2 GiB RAM + 2 vCPU) or m5.large (8 GiB RAM + 2 vCPU) when creating the Cloud9 instance   |
 |-----------------------------------------|
 
 1. Clone the CDK App and install dependencies
