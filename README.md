@@ -22,7 +22,7 @@ To deploy the CDK app, you will need the following:
 
 1. Command line interface (CLI) to deploy the CDK. You can use a CLI in your location workstation or [AWS Cloud9](https://aws.amazon.com/cloud9/). Follow the guide [here](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment-main.html) to launch a new Cloud9 environment
 
-2. CDK version 2 installed. You can use the command below to install CDK.
+2. CDK version 2 installed. You can use the command below to install CDK. AWS Cloud9 instance have CDK pre-installed.
 ```bash
 npm install -g aws-cdk
 ```
@@ -127,7 +127,7 @@ We will be using [Postman](https://www.postman.com/) to test the API so if not a
 
 1. Navigate to the Todo App directory
 ```bash
-cd aws-appsync-multi-region-active-active/sample-todo-app
+cd ../sample-todo-app
 ```
 
 2. Install dependencies
@@ -135,7 +135,7 @@ cd aws-appsync-multi-region-active-active/sample-todo-app
 npm install
 ```
 
-3. Initialize Amplify and use the default options
+3. Initialize Amplify and use the default options. You will need to setup AWS Access Keys that will be used by Amplify.
 ```bash
 amplify init
 ```
