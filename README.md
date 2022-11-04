@@ -181,7 +181,7 @@ npm run start
 
 
 ## Clean up
-Run the command below to clean up the stacks created.
+Run the command below to clean up the stacks created. Note: If you get an error around not being able to delete the lambda@edge function and replicas, go to the AWS Cloudformation console and delete the template manually.
 ```bash
 cd aws-appsync-multi-region-active-active/appsync-multi-region-api
 chmod +x global_appsync_cleanup.sh
