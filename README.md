@@ -1,7 +1,7 @@
 ## AWS AppSync Multi-Region Active Active Deployment
 
 This repository contains two applications
-1. [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) app that will create a sample GraphQL schema for a Todo App deployed in AppSync across two AWS Regions
+1. [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/) app that will create a sample GraphQL API for a Todo App deployed in AppSync across two AWS Regions
 
 2. A sample React application setup using [AWS Amplify](https://aws.amazon.com/amplify/) that will consume the multi-region active active AppSync API via a single endpoint and showcase how you can query the API endpoint for Queries, Mutations and Subscription
 
