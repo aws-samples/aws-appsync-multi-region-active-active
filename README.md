@@ -77,7 +77,7 @@ npm install
     * Save the changes to the file
 
 3. Update the variables required by Lambda@Edge. This is required because you cannot use environment variables for Lambda@Edge. For other options on passing variables to lambda at edge, refer to the blog [here](https://aws.amazon.com/blogs/networking-and-content-delivery/leveraging-external-data-in-lambdaedge/)
-  * Navigate to the file 
+   * Navigate to the file 
    ```bash
    aws-appsync-multi-region-active-active/appsync-multi-region-api/lambdas/appsync-globalapi-router/configs.json
    ```
@@ -89,6 +89,7 @@ npm install
     secondaryRegion: '<region_code>',
     secondaryRegionAppSyncCustomDomain: '<secondary.example.com>',
    ```
+   * Save the changes to the file
 
 4. Boostrap CDK in the target regions by running the commands below. You will need to specify the primary and secondary region code (e.g. eu-west-1 and us-east-1)
 ```bash
