@@ -3,11 +3,25 @@ import { API } from 'aws-amplify'
 import { useState } from 'react';
 import { Heading, Alert } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+import { CONNECTION_STATE_CHANGE } from '@aws-amplify/pubsub';
+import { Hub } from 'aws-amplify';
+import { Badge } from '@aws-amplify/ui-react';
 
 export const Subscriptions = () => {
 
   const [newTodoSubscriptionMessage, setNewTodoSubscriptionMessage] = useState([])
   const [subscriptionVar, setSubscriptionVar] = useState()
+  const [connectionVar, setConnectionVar] = useState()
+  
+   useEffect(() => {
+    Hub.listen('api', (data) => {
+      const { payload } = data;
+      if (payload.event === CONNECTION_STATE_CHANGE) {
+        setConnectionVar(payload.data.connectionState);
+        console.log(connectionVar);
+      }
+    });
+  }, [connectionVar]);
 
   const handleTodoSubscription = async () => {
     try {
