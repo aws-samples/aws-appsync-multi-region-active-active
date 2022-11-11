@@ -1,6 +1,6 @@
 import { onAddTodo } from '../graphql/subscriptions'
 import { API } from 'aws-amplify'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Heading, Alert } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import { CONNECTION_STATE_CHANGE } from '@aws-amplify/pubsub';
