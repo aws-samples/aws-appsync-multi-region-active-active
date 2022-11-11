@@ -11,7 +11,7 @@ export const Subscriptions = () => {
 
   const [newTodoSubscriptionMessage, setNewTodoSubscriptionMessage] = useState([])
   const [subscriptionVar, setSubscriptionVar] = useState()
-  const [connectionVar, setConnectionVar] = useState()
+  const [connectionVar, setConnectionVar] = useState('Disconnected')
   
    useEffect(() => {
     Hub.listen('api', (data) => {
