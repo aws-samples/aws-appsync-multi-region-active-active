@@ -66,6 +66,7 @@ export const Subscriptions = () => {
   return (
     <div>
       <Heading level={3}>Todo Notifications</Heading>
+      {connectionVar === "Connected" ? <Badge size="small" variation="success">{connectionVar}</Badge> : <Badge size="small" variation="warning">{connectionVar}</Badge>}
       {subscriptionVar ? <button className="button-sub" onClick={handleTodoUnSubscription}>Unsubscribe</button> : <button className="button-sub" onClick={handleTodoSubscription}>Subscribe</button>
       }
       <h3> Subscribe to the new todos</h3>
