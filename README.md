@@ -172,7 +172,7 @@ const awsmobile = {
 export default awsmobile;
 ```
 
-6. Launch the Todo App.
+6. Launch the Todo App. You can via the app running by clicking on "Preview" in Cloud9 menu and then "Preview Running Application"
 ```bash
 npm run start
 ```
