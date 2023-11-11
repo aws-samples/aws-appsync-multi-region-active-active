@@ -7,7 +7,7 @@
     "license": "MIT-0",
     "dependencies": {
       "aws-sdk": "^2.1354.0",
-      "axios": ">=0.21.2",
+      "axios": ">=1.6.0",
       "cross-fetch": "^3.0.4",
       "graphql": "^15.5.0",
       "graphql-tag": "^2.10.1"
